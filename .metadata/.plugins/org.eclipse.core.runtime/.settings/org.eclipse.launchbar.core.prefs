@@ -1,0 +1,11 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:BinPacking,org.eclipse.launchbar.core.descriptorType.default\:Fibonacci,org.eclipse.launchbar.core.descriptorType.default\:Fibonacci (1),org.eclipse.launchbar.core.descriptorType.default\:CountQuickSort,org.eclipse.launchbar.core.descriptorType.default\:BinPackingMapping,org.eclipse.launchbar.core.descriptorType.default\:BinPacking (2),org.eclipse.launchbar.core.descriptorType.default\:BinPacking (1),org.eclipse.launchbar.core.descriptorType.default\:RodCutting,org.eclipse.launchbar.core.descriptorType.default\:AStar
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:AStar/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:BinPacking\ (1)/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:BinPacking/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:BinPacking/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Factorial/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Fibonacci\ (1)/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:RodCutting/activeLaunchMode=debug

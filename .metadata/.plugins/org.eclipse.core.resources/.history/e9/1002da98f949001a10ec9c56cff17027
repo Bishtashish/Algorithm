@@ -1,0 +1,25 @@
+package dynamicProgramming.bottomUp;
+
+public class BinPacking {
+
+	private int maxSize;
+	private int[] bins;
+
+	BinPacking(int maxSize, int[] weights) {
+
+	}
+
+	private void BP(int[] bins, int[] weights) {
+
+		for (int weight : weights) {
+			for (int bin : bins) {
+				if (weight <= bin) {
+					bin -= weight;
+					break;
+				}
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package dynamicProgramming.bottomUp;
+
+public class BinPacking {
+
+	private int maxSize;
+	private int[] bins;
+	
+	BinPacking(int maxSize, int[] weights){
+		
+	}
+	
+}

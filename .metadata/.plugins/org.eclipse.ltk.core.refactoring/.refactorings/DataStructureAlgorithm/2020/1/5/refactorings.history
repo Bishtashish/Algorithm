@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;sort.countQuickSort&apos; to &apos;CountQuickSort&apos;&#x0A;- Original project: &apos;DataStructureAlgorithm&apos;&#x0A;- Original element: &apos;sort.countQuickSort&apos;&#x0A;- Renamed element: &apos;sort.CountQuickSort&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;countQuickSort&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;sort{countQuickSort.java[countQuickSort" matchStrategy="1" name="CountQuickSort" qualified="false" references="true" similarDeclarations="false" stamp="1580184993582" textual="false" version="1.0"/>
+</session>

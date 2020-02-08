@@ -1,0 +1,68 @@
+package dynamicProgramming.bottomUp;
+
+import java.util.Arrays;
+import java.util.Collections;
+
+public class BinPacking {
+
+	private int maxSize;
+	private int[] bins;
+	private int[] weights;
+
+	BinPacking(int maxSize, int[] weights) {
+		this.maxSize=maxSize;
+		this.bins = new int[weights.length];
+		Arrays.fill(this.bins,maxSize);
+		this.weights=sortDecendingOrder(weights);
+		
+		 long start = System.currentTimeMillis(); 
+		BP(bins,this.weights);
+		long end = System.currentTimeMillis();
+	     System.out.println("Takes " + 
+                 (end - start)/1000 + "ms"); 
+		
+
+	}
+
+	private void BP(int[] bins, int[] weights) {
+
+		for (int i = 0; i < weights.length; i++) {
+			for (int j = 0; j < bins.length; j++) {
+				if (weights[i] <= bins[j]) {
+					bins[j] -= weights[i];
+					bins=sortAscendingOrder(bins);
+					break;
+				}
+			}
+			System.out.println("Weight : " + weights[i] + "\t Bin Status : " + Arrays.toString(bins));
+		}
+	}
+
+	int binCount() {
+
+		int temp = 0;
+		for (int i = 0; i < bins.length; i++)
+			if (bins[i] < maxSize)
+				temp++;
+		return temp;
+	}
+	private int[] sortDecendingOrder(int[] array) {
+		Arrays.parallelSort(array);
+		Collections.reverse(Arrays.asList(array));
+		return array;
+	}
+	
+	private int[] sortAscendingOrder(int[] array){
+		Arrays.parallelSort(array);
+		return array;
+	}
+
+	public static void main(String args[]) {
+
+		int[] objs = { 2, 3, 1, 2, 4, 7, 8, 1, 9 };
+		BinPacking bp = new BinPacking(10, objs);
+		System.out.println("\t No of bin used: " + bp.binCount());
+
+	}
+
+}
