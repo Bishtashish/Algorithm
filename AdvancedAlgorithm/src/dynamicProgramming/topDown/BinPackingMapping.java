@@ -27,15 +27,16 @@ public class BinPackingMapping {
 		for (int j = 0; j < bins.length; j++) {
 			if (weight <= bins[j]) {
 				bins[j] -= weight;
+				System.out.println("Weight: " + weight + " mapped to bin " + j); 
 				break;
 			}
 		} // Sub optimal
-		System.out.println("Weight: " + weight + " mapped to bin " + binCount()); //Added this line only to re-iterate the output to bin mapping.
+//		System.out.println("Weight: " + weight + " mapped to bin " + binCount()); //Added this line only to re-iterate the output to bin mapping.
 		//System.out.println("Weight : " + weights[0] + "\t Bin Status : " + Arrays.toString(bins));
 		
-		if (1 < this.weights.length)
+		if (1 < this.weights.length){
 			weights=Arrays.copyOfRange(weights, 1, weights.length);
-			BP(sortAscendingOrder(bins),weights[0]);
+			BP(sortAscendingOrder(bins),weights[0]);}
 	}
 
 	 int binCount() {
@@ -56,7 +57,7 @@ public class BinPackingMapping {
 	public static void main(String args[]) {
 
 		int[] objs = { 2,3,1,2,4,7,8,1,9 };
-		BinPacking bp = new BinPacking(10, objs);
+		BinPackingMapping bp = new BinPackingMapping(10, objs);
 		System.out.println("\t No of bin used: " + bp.binCount());
 
 	}
