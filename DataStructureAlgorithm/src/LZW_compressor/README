@@ -1,0 +1,58 @@
+README
+
+@author Ashish Bisht <abisht1@uncc.edu>
+
+
+
+
+There are two categories of compression techniques, lossy and lossless.
+Whilst each uses different techniques to compress files, both have the same aim:
+To look for duplicate data in the graphic (GIF for LZW) and use a much more compact data representation.
+Lossless compression reduces bits by identifying and eliminating statistical redundancy.
+No information is lost in lossless compression.
+On the other hand, Lossy compression reduces bits by removing unnecessary or less important information.
+So we need Data Compression mainly because:
+
+Uncompressed data can take up a lot of space, which is not good for limited hard drive space and internet download speeds.
+While hardware gets better and cheaper, algorithms to reduce data size also helps technology evolve.
+Example: One minute of uncompressed HD video can be over 1 GB.How can we fit a two-hour film on a 25 GB Blu-ray disc?
+Lossy compression methods include DCT (Discreet Cosine Transform),
+Vector Quantisation and Transform Coding while Lossless compression methods include RLE (Run Length Encoding),
+string-table compression, LZW (Lempel Ziff Welch) and zlib.
+There Exist several compression Algorithms, but we are concentrating on LZW.
+
+
+Encoding
+A high level view of the encoding algorithm is shown here:
+
+Initialize the dictionary to contain all strings of length one.
+Find the longest string W in the dictionary that matches the current input.
+Emit the dictionary index for W to output and remove W from the input.
+Add W followed by the next symbol in the input to the dictionary.
+Go to Step 2.
+
+
+Decoding
+The decoding algorithm works by reading a value from the encoded input
+ and outputting the corresponding string from the initialized dictionary.
+To rebuild the dictionary in the same way as it was built during encoding,
+it also obtains the next value from the input and adds to the dictionary
+the concatenation of the current string and the first character of the
+string obtained by decoding the next input value,
+or the first character of the string just output if the next value can not be decoded.
+
+
+
+
+
+
+
+
+
+
+
+References
+https://en.wikipedia.org/wiki/Lempel–Ziv–Welch
+https://en.wikipedia.org/wiki/Unix
+Digital Compression for Multimedia   by Jerry D. Gibson, Toby Berger, Tom Lookabaugh
+
